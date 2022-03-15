@@ -53,16 +53,16 @@ class DonutApdapter extends BaseAdapter {
                 convertView = LayoutInflater.from(parent.getContext()).inflate(idLayout, parent, false);
             }
             TextView tvmoTa = convertView.findViewById(R.id.txtAbout);
-            TextView tvProductName = (TextView) convertView.findViewById(R.id.txtName);
-            TextView tvProductPrice = (TextView) convertView.findViewById(R.id.txtPrice);
+            TextView tvDonutName = (TextView) convertView.findViewById(R.id.txtName);
+            TextView tvDonutPrice = (TextView) convertView.findViewById(R.id.txtPrice);
             ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
-            final Donut product = listDonut.get(position);
+            final Donut donut = listDonut.get(position);
 
             if (listDonut != null && !listDonut.isEmpty()) {
-                tvmoTa.setText(product.getAbout());
-                tvProductName.setText(product.getName());
-                imageView.setImageResource(product.getImg());
-                tvProductPrice.setText(product.getPrice());
+                tvmoTa.setText(donut.getAbout());
+                tvDonutName.setText(donut.getName());
+                imageView.setImageResource(donut.getImg());
+                tvDonutPrice.setText(donut.getPrice());
             }
             return convertView;
     }
